@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivo de Desenvolvimento Sustentável</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        header {
+            text-align: left;
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+        }
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha o conteúdo no topo */
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+}
+
+.video {
+    width: 60%; /* Ocupa 60% da largura da div */
+    height: 100%; /* Faz o vídeo ocupar toda a altura disponível */
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ajusta o vídeo para preencher a área, mantendo a proporção */
+}
+
+
+        header h1 {
+            margin: 0;
+}
+
+        main {
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .rounded-title {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .course-item {
+            text-align: left;
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .course-item h2 {
+            color: #BAA8A8;
+            margin: 10px 0;
+        }
+
+    
+        h2 i {
+         margin-right: 100px;
+         color: #BAA8A8;
+         font-size: 1.2em;
+         vertical-align: middle;
+}
+
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #FFFFFF;
+            margin-top: 40px;
+            border-top: 1px solid #DEDEDE;
+        }
+
+        .footer a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 1em;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .privacy-policy, .credits, .contact {
+            text-align: left;
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+        }
+        .contact a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration:underline;
+}
+
+        .intro-section {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 20px auto;
+        }
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.video-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Proporção de 16:9 */
+    position: relative;
+    background-color: #f3f3f3; /* Cor de fundo caso o vídeo não tenha conteúdo */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.text-container {
+    flex: 2;
+    text-align: justify;
+}
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Garante que o conteúdo fique no topo */
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    position: relative; /* Garantir que o conteúdo seja posicionado corretamente dentro da caixa */
+}
+
+.image-container {
+    flex: 1;
+    max-width: 45%; /* Limita a largura da imagem */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+    display: flex;
+    align-items: flex-end; /* Alinha a imagem ao fundo */
+    margin-top: 0px; /* Ajuste para mover a imagem um pouco mais para baixo */
+}
+
+.image-container img {
+    width: 100%; /* Faz a imagem ocupar t cortando oda a largura do contêiner */
+    height: 200%; /* Faz a imagem ocupar toda a altura do contêiner */
+    object-fit: cover; /* Faz a imagem preencher o contêiner sem distorção, o que exceder */
+    border-radius: 10px;
+}
+.text-container {
+    flex: 2;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.text-container p {
+    color: #000000;
+    font-size: 1em;
+    line-height: 1.6;
+}
+.video-overlay {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: -10px; /* Remove espaço entre o texto e o vídeo */
+    border-radius: 10px 10px 0 0; /* Apenas os cantos superiores arredondados */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.video-overlay {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto 10px; /* Espaço inferior entre texto e vídeo */
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Largura do texto */
+    max-width: 800px; /* Ajuste conforme necessário */
+}
+.video-overlay p {
+    font-size: 1.2em; /* Aumenta o tamanho do texto */
+    font-weight: bold; /* Aplica negrito */
+    color: #000000; /* Cor semelhante ao destaque */
+    background-color: #FFFFFF; /* Fundo claro para destaque */
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center; /* Centraliza o texto */
+    max-width: 600px; /* Limita a largura */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.saiba-mais-container {
+    text-align: center; /* Centraliza a div */
+    margin: 20px auto;
+}
+
+.saiba-mais {
+    display: inline-block;
+    font-size: 2.0em;
+    font-weight: bold;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 30px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.image-link img {
+    transition: transform 0.3s ease;
+}
+
+.image-link:hover img {
+    transform: scale(1.05); /* Aumenta o tamanho da imagem em 5% */
+}
+.textv3 {
+    text-align: center;
+    background-color: #FFFFFF; /* Cor de fundo suave */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeitos suaves */
+}
+
+.textv3:hover {
+    background-color: #00aaff; /* Cor de fundo quando passar o mouse */
+    color: #fff; /* Cor do texto quando passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+.text-box {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.text-box p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
+.text-box {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.text-box p {
+    font-size: 1.2em;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 2.0em;
+    padding: 30px 50px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #444444;
+}
+.saiba-mais:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.saiba-mais-v2 {
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 20px auto; /* Adiciona um espaço de margem */
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.saiba-mais:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.saiba-mais-Gabriel {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável</h1>
+        <p>A ODS é uma agenda da ONU com metas para um desenvolvimento sustentável até 2030.</p>
+    </header>
+<!-- Bloco Imagem e Texto -->
+    <div class="course-item">
+        <div class="image-container">
+<a href="https://brasil.un.org/pt-br/sdgs" target="_blank" class="image-link">
+            <img src="https://th.bing.com/th/id/OIP.F4qaR6konDFAAwtNUV3VRAHaHj?rs=1&pid=ImgDetMain" alt="ODS">
+</a>
+        </div>
+        <div class="text-container">
+            <p>Neste site, você encontrará informações sobre os Objetivos de Desenvolvimento Sustentável (ODS), com ênfase na ODS 4, que busca garantir uma educação de qualidade para todos. O site apresenta as metas dessa ODS, suas soluções propostas e os desafios enfrentados para alcançá-las. Além disso, há recursos visuais e vídeos educativos que ajudam a entender a importância de um desenvolvimento sustentável e a promoção de uma educação inclusiva e acessível.</p>
+<div class="textv3">
+    <p>Clique na imagem para ser redirecionado ao site da ODS.</p>
+</div>
+  </div>
+    </div>
+    <main>
+        <div class="intro-section">
+            <h2>O que é a ODS (Objetivo de Desenvolvimento Sustentável)?</h2>
+            <p>A ODS (Objetivo de Desenvolvimento Sustentável) é uma iniciativa global da ONU, composta por 17 metas que buscam erradicar a pobreza, proteger o planeta e garantir que todas as pessoas desfrutem de paz e prosperidade até 2030. Essas metas são interligadas e têm como objetivo promover o desenvolvimento social, econômico e ambiental de forma equilibrada. Os ODS envolvem todos os países e setores da sociedade, sendo uma agenda universal para a melhoria da vida das pessoas e a preservação do meio ambiente.</p>
+        </div>
+
+        <div class="intro-section">
+            <h2>ODS 4: Educação de Qualidade</h2>
+            <p>A ODS 4 tem como principal objetivo garantir uma educação inclusiva, equitativa e de qualidade para todos. A educação é essencial para o desenvolvimento humano, sendo a base para a redução da pobreza e a promoção da igualdade. Essa meta busca que todos, desde a primeira infância até a idade adulta, tenham acesso a oportunidades de aprendizagem que os preparem para os desafios do futuro.</p>
+            <p>Além disso, a ODS 4 se preocupa com a melhoria da qualidade do ensino, garantindo que ele seja relevante e acessível. A formação de professores e a infraestrutura escolar são fundamentais para garantir que a educação seja efetiva e alcance todos os indivíduos, independentemente de sua origem ou condição social. A educação também deve proporcionar competências para o mercado de trabalho e a cidadania.</p>
+            <p>Por fim, a ODS 4 promove uma educação que respeite os direitos humanos, a igualdade de gênero e a sustentabilidade. Isso envolve a integração de temas como a paz, a cidadania e o cuidado com o meio ambiente dentro do currículo escolar. Para alcançar esses objetivos, é necessário um esforço conjunto de governos, sociedade civil e setor privado para garantir recursos e políticas públicas eficazes.</p>
+        </div>
+
+        <div class="intro-section">
+            <h2>Metas da ODS 4</h2>
+            <h3><i class="fas fa-check-circle"></i>ﾠ1. Meta 4.1: Garantir que todos os jovens e uma proporção substancial de adultos atinjam a literacia e a numeracia.</h3>
+            <p><strong>Solução eficiente:</strong> Implementar programas de alfabetização e numeramento comunitário, focando em soluções digitais e presenciais para alcançar áreas remotas e populações com dificuldades de acesso à educação formal.</p>
+            <p><strong>Problemas:</strong> A falta de recursos tecnológicos, a escassez de professores qualificados e a resistência de algumas comunidades a programas educacionais podem dificultar o alcance dessa meta.</p>
+
+            <h3><i class="fas fa-check-circle"></i>ﾠ2. Meta 4.2: Garantir que todas as meninas e meninos tenham acesso a educação de desenvolvimento na primeira infância e pré-escola, de qualidade.</h3>
+            <p><strong>Solução eficiente:</strong> Expandir o número de creches e escolas infantis públicas, com programas de incentivo para garantir a matrícula de crianças em idade pré-escolar e capacitar educadores para atender essa faixa etária.</p>
+            <p><strong>Problemas:</strong> A limitação de orçamento destinado à educação infantil, a falta de infraestrutura e a escassez de profissionais especializados são desafios a serem enfrentados.</p>
+
+            <h3><i class="fas fa-check-circle"></i>ﾠ3. Meta 4.3: Garantir o acesso igualitário de todas as mulheres e homens a uma formação técnica, profissional e superior de qualidade.</h3>
+            <p><strong>Solução eficiente:</strong> Criar bolsas de estudo e parcerias público-privadas para facilitar o acesso ao ensino técnico e superior, além de promover a educação a distância como uma alternativa para regiões mais distantes.</p>
+            <p><strong>Problemas:</strong> A desigualdade no acesso à educação, especialmente em áreas rurais e periféricas, e o alto custo de cursos superiores são obstáculos significativos.</p>
+
+            <h3><i class="fas fa-check-circle"></i>ﾠ4. Meta 4.4: Aumentar substancialmente o número de jovens e adultos que têm as competências necessárias para o emprego, o trabalho decente e o empreendedorismo.</h3>
+            <p><strong>Solução eficiente:</strong> Oferecer programas de capacitação profissional com foco nas habilidades exigidas pelo mercado de trabalho atual, e criar parcerias com empresas para garantir estágios e oportunidades de emprego.</p>
+            <p><strong>Problemas:</strong> A desatualização dos currículos educacionais em relação às necessidades do mercado de trabalho e a dificuldade de integração entre as instituições de ensino e o setor privado são desafios que devem ser superados.</p>
+        </div>
+<div class="video-overlay">
+<div class="conteudo">
+    <p>PARA SABER MAIS ASSISTA O VÍDEO</p>
+</div>
+        <iframe src="https://www.youtube.com/embed/Fev2MHAa-qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+<div class="text-box">
+    <p>Para expandir as informações e não ficar apenas nas minhas palavras, criei um site onde você pode encontrar diversos outros sites que oferecem cursos gratuitos para pessoas que buscam aprimorar seu currículo e alcançar novas oportunidades profissionais.</p>
+</div>
+<div class="text-box">
+    <p>Descubra mais clicando no botão abaixo e explore as oportunidades que preparamos para você!</p>
+ </div>
+    <div class="saiba-mais-Gabriel">
+        <a href="http://127.0.0.1:5500/meu%20site%20oficial%20v2/indexxx.html" class="button">Saiba mais</a>
+</div>
+    </main>
+
+    <section class="credits">
+        <h2>Créditos</h2>
+        <p>Autor: Gabriel Soares da Silva</p>
+        <p>Instituição: Escola Estadual Francisco Inácio Peixoto</p>
+        <p>Evento: Meu Primeiro Site 2024</p>
+    </section>
+
+    <section class="privacy-policy">
+        <h2>Política de Privacidade</h2>
+        <p>Este site respeita sua privacidade e se compromete a proteger seus dados pessoais. Nenhuma informação será compartilhada com terceiros sem o seu consentimento. Utilizamos cookies apenas para melhorar a sua experiência de navegação.</p>
+    </section>
+    <section class="contact">
+        <h2>Contato</h2>
+        <p>Email: <a href="mailto:gabriel.soares.da.dilva@gmail.com">gabriel.soares.da.dilva@gmail.com</a></p>
+    </section>
+<div class="saiba-mais-container">
+    <p><a href="https://brasil.un.org/pt-br/sdgs" class="saiba-mais" target="_blank">Saiba Mais</a></p>
+</div>
+</body>
+</html>
